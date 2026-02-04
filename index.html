@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surpresa 💛</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+  font-family:Arial, Helvetica, sans-serif;
+}
+.screen{
+  background:#fff;
+  border-radius:20px;
+  padding:30px;
+  max-width:380px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+button{
+  background:#ee9ca7;
+  border:none;
+  color:#fff;
+  padding:15px 25px;
+  font-size:1rem;
+  border-radius:30px;
+  cursor:pointer;
+}
+button:hover{opacity:.9}
+.hidden{display:none}
+img{width:220px;border-radius:12px}
+</style>
+</head>
+<body>
+
+<div class="screen" id="start">
+  <h2>Tenho algo pra você 💛</h2>
+  <p>Clica com carinho</p>
+  <button onclick="next()">Abrir surpresa</button>
+</div>
+
+<div class="screen hidden" id="final">
+  <p>
+  Faela, tu é linda demais, um absurdo de mulher, momozinho.<br><br>
+  Você não tá “na planta”, você é o projeto inteiro, obra entregue, completa, cheirando a novo.<br><br>
+  Se note como a mulher incrível e poderosa que você é.
+  </p>
+  <img src="whatsapp_qr_faela_quente.png">
+  <p>Escaneia 💬</p>
+</div>
+
+<script>
+function next(){
+ document.getElementById('start').classList.add('hidden');
+ document.getElementById('final').classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
